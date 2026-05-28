@@ -38,6 +38,21 @@ headerStyle.textContent = `
     background: rgba(255, 255, 255, 0.96) !important;
   }
 
+  .hero-panel,
+  .glass-card {
+    border-radius: 22px !important;
+  }
+
+  .signal {
+    border-radius: 14px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  }
+
+  .signal-number {
+    border-radius: 10px !important;
+  }
+
   .hero {
     background-image:
       linear-gradient(90deg, rgba(6, 27, 58, 0.94) 0%, rgba(6, 27, 58, 0.78) 48%, rgba(6, 27, 58, 0.22) 100%),
