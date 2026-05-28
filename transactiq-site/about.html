@@ -6,6 +6,21 @@
   <title>About | TransactIQ</title>
   <meta name="description" content="Independent payments advisory for organisations that need payments strategy to translate into execution.">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .team-card { border: 1px solid var(--line); border-radius: 34px; background: var(--white); overflow: hidden; box-shadow: var(--soft-shadow); display: grid; grid-template-columns: 250px 1fr; min-height: 430px; }
+    .team-photo { position: relative; min-height: 100%; background: radial-gradient(circle at top, rgba(32,198,223,0.18), transparent 34%), linear-gradient(135deg, var(--ink), var(--navy-2)); overflow: hidden; display: grid; place-items: end center; }
+    .team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .team-photo .fallback-initials { position: absolute; inset: 0; display: grid; place-items: center; color: var(--cyan); font-family: "Inter Tight", Inter, sans-serif; font-size: 5rem; font-weight: 900; opacity: 0; }
+    .team-photo.image-missing .fallback-initials { opacity: 1; }
+    .team-body { padding: 32px; display: grid; align-content: center; }
+    .team-body h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1; margin-bottom: 8px; }
+    .team-role { color: var(--blue); font-weight: 900; margin-bottom: 20px; line-height: 1.35; }
+    .team-body p { color: var(--muted); font-size: 0.96rem; }
+    .team-body p + p { margin-top: 14px; }
+    @media (max-width: 1080px) { .team-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 680px) { .team-card { grid-template-columns: 1fr; } .team-photo { min-height: 340px; } .team-body { padding: 26px; } }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -65,28 +80,39 @@
         <div class="section-heading reveal">
           <div>
             <div class="kicker">Our team</div>
-            <h2>Led by founders with a scalable advisory model.</h2>
+            <h2>Led by founders with deep payments expertise.</h2>
           </div>
           <p>
-            TransactIQ is led by its founders, Harold and Charles, with a flexible consulting model designed to bring in specialist payments, risk, data and implementation expertise as client engagements require it.
+            TransactIQ is led by Harold Van Eeden and Charles Campbell, with a scalable advisory model designed to bring in specialist payments, risk, data and implementation expertise as client engagements require it.
           </p>
         </div>
 
-        <div class="outcome-grid">
-          <article class="outcome-card reveal">
-            <div class="number">H</div>
-            <div>
-              <h3>Harold</h3>
-              <p><strong>Co-Founder</strong></p>
-              <p>Founder profile and specialist focus to be added. This card is structured so fuller biographies, credentials and LinkedIn links can be introduced without redesigning the section.</p>
+        <div class="team-grid">
+          <article class="team-card reveal">
+            <div class="team-photo">
+              <span class="fallback-initials">H</span>
+              <img src="assets/images/team-harold.webp" alt="Harold Van Eeden" onerror="this.closest('.team-photo').classList.add('image-missing'); this.remove();">
+            </div>
+            <div class="team-body">
+              <h3>Harold Van Eeden</h3>
+              <div class="team-role">Managing Partner | Strategist and expert in commercial payments</div>
+              <p>Harold Van Eeden is a seasoned payments industry executive with over 25 years of experience driving growth, innovation and transformation across global and emerging markets.</p>
+              <p>Prior to TransactIQ, Harold held senior leadership roles at Visa, including Senior Director, CEMEA B2B Solutions and Director, Sub-Saharan Africa Commercial Business. In these roles, he led strategic initiatives to expand commercial and B2B payment capabilities, strengthen partnerships and accelerate the adoption of modern payment solutions across diverse markets.</p>
+              <p>Harold is recognised for his ability to translate complex challenges into scalable, high-impact solutions.</p>
             </div>
           </article>
-          <article class="outcome-card reveal">
-            <div class="number">C</div>
-            <div>
-              <h3>Charles</h3>
-              <p><strong>Co-Founder</strong></p>
-              <p>Founder profile and specialist focus to be added. Future team members can be added using the same card format as the TransactIQ advisory team grows.</p>
+
+          <article class="team-card reveal">
+            <div class="team-photo">
+              <span class="fallback-initials">C</span>
+              <img src="assets/images/team-charles.webp" alt="Charles Campbell" onerror="this.closest('.team-photo').classList.add('image-missing'); this.remove();">
+            </div>
+            <div class="team-body">
+              <h3>Charles Campbell</h3>
+              <div class="team-role">Managing Partner | Payments, consulting and analytics professional</div>
+              <p>With over 20 years of global experience across advisory, implementation services and training, Charles Campbell has built and led high-performing teams that help financial institutions turn data and strategy into tangible commercial results.</p>
+              <p>His career spans senior roles at Visa, where he headed the CEMEA Consulting & Analytics implementation services practice, as well as specialist analytics firms Qarar and Principa, where he delivered credit risk analytics and consulting engagements for banks and lenders worldwide.</p>
+              <p>Charles holds advanced degrees in Operations Research from Stellenbosch University and brings a rare combination of quantitative depth and commercial acumen to every engagement.</p>
             </div>
           </article>
         </div>
