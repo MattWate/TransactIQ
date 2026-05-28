@@ -38,6 +38,60 @@ headerStyle.textContent = `
     background: rgba(255, 255, 255, 0.96) !important;
   }
 
+  .hero {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.94) 0%, rgba(6, 27, 58, 0.78) 48%, rgba(6, 27, 58, 0.22) 100%),
+      url("../images/home-hero-advisory-meeting.jpg") !important;
+  }
+
+  .image-band {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.93), rgba(6, 27, 58, 0.72)),
+      url("../images/data-portfolio-dashboard.jpg") !important;
+  }
+
+  .image-band.alt {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.92), rgba(6, 27, 58, 0.74)),
+      url("../images/market-performance-chart.jpg") !important;
+  }
+
+  .page-hero {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.94) 0%, rgba(6, 27, 58, 0.76) 55%, rgba(6, 27, 58, 0.24) 100%),
+      url("../images/consumer-payment-card.jpg") !important;
+  }
+
+  .page-hero.commercial {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.94) 0%, rgba(6, 27, 58, 0.76) 55%, rgba(6, 27, 58, 0.24) 100%),
+      url("../images/data-portfolio-dashboard.jpg") !important;
+  }
+
+  .page-hero.consumer {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.94) 0%, rgba(6, 27, 58, 0.76) 55%, rgba(6, 27, 58, 0.24) 100%),
+      url("../images/consumer-card-transaction.jpg") !important;
+  }
+
+  .page-hero.about {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.94) 0%, rgba(6, 27, 58, 0.76) 55%, rgba(6, 27, 58, 0.24) 100%),
+      url("../images/about-professional-handshake.jpg") !important;
+  }
+
+  .page-hero.careers {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.94) 0%, rgba(6, 27, 58, 0.76) 55%, rgba(6, 27, 58, 0.24) 100%),
+      url("../images/careers-corporate-architecture.jpg") !important;
+  }
+
+  .cta-panel {
+    background-image:
+      linear-gradient(90deg, rgba(6, 27, 58, 0.94), rgba(6, 27, 58, 0.74)),
+      url("../images/about-professional-handshake.jpg") !important;
+  }
+
   @media (max-width: 960px) {
     .nav-links {
       background: rgba(255, 255, 255, 0.96) !important;
