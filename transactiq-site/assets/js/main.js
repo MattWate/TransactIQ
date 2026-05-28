@@ -1,6 +1,12 @@
 const headerStyle = document.createElement('style');
 headerStyle.textContent = `
   .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
     background: rgba(6, 27, 58, 0.78) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
     backdrop-filter: blur(18px) !important;
