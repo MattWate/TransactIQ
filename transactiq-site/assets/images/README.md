@@ -1,14 +1,14 @@
-# TransactIQ Image Assets
+# TransactIQ final logo assets
 
-Client-supplied imagery has been optimised and renamed for web use.
+Generated from the client-approved logo direction.
 
-- hero-digital-handshake.jpg — homepage hero
-- band-b2b-payment-innovation.jpg — homepage delivery band
-- commercial-global-payments.jpg — commercial consulting hero and global execution band
-- consumer-digital-payments.jpg — consumer consulting hero
-- contact-digital-card.jpg — contact hero and CTA panel background
-- about-consulting-handshake.jpg — about hero
-- careers-strategy-board.jpg — careers hero
-- data-ai-payments.jpg — spare supporting image for future sections
+Upload to:
+`transactiq-site/assets/images/`
 
-All files are 1800x1000 JPEGs, compressed for web performance.
+Recommended usage:
+- `transactiq-logo-nav.png` — dark header navigation, no tagline
+- `transactiq-logo-nav-light.png` — alternate nav logo for light backgrounds
+- `transactiq-logo-full-light.png` — footer/light background full logo with tagline
+- `transactiq-logo-full-dark.png` — dark background full logo with tagline
+- `transactiq-mark.png` — standalone mark
+- `favicon.ico`, `favicon-32x32.png`, `favicon-16x16.png`, `apple-touch-icon.png` — browser/app icons
