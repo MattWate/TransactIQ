@@ -11,6 +11,16 @@ faviconLinks.forEach((attrs) => {
   document.head.appendChild(link);
 });
 
+const brandImages = document.querySelectorAll('.brand img');
+brandImages.forEach((img) => {
+  img.src = 'assets/images/transactiq-logo-nav.svg';
+});
+
+const footerBrandImages = document.querySelectorAll('.footer-brand img');
+footerBrandImages.forEach((img) => {
+  img.src = 'assets/images/transactiq-logo-colour.svg';
+});
+
 const headerStyle = document.createElement('style');
 headerStyle.textContent = `
   .site-header {
@@ -26,7 +36,9 @@ headerStyle.textContent = `
   }
 
   .site-header.scrolled { background: rgba(6, 27, 58, 0.92) !important; box-shadow: 0 14px 34px rgba(6, 27, 58, 0.20) !important; }
-  .brand { background: rgba(255, 255, 255, 0.96) !important; padding: 7px 11px !important; border-radius: 16px !important; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10) !important; }
+  .brand { background: transparent !important; padding: 0 !important; border-radius: 0 !important; box-shadow: none !important; min-width: 210px !important; }
+  .brand img { width: 210px !important; max-width: 210px !important; height: auto !important; }
+  .footer-brand img { width: 190px !important; max-width: 190px !important; height: auto !important; }
   .nav-links { color: rgba(255, 255, 255, 0.74) !important; }
   .nav-links a:hover, .nav-links a.active { color: var(--cyan) !important; }
   .nav-cta { color: var(--ink) !important; background: var(--cyan) !important; box-shadow: 0 12px 28px rgba(32, 198, 223, 0.20) !important; }
@@ -75,8 +87,8 @@ headerStyle.textContent = `
   .approach-block blockquote, .approach-block a { position: relative; z-index: 1; }
   .approach-block blockquote { font-family: "Inter Tight", Inter, sans-serif; font-size: clamp(1.35rem, 2.3vw, 2rem); line-height: 1.08; letter-spacing: -0.045em; font-weight: 900; }
 
-  @media (max-width: 960px) { .nav-links { background: rgba(255, 255, 255, 0.96) !important; border: 1px solid var(--line) !important; color: var(--muted) !important; } .nav-links a:hover, .nav-links a.active { background: var(--ice) !important; color: var(--blue) !important; } .vertical-intro, .approach-block { grid-template-columns: 1fr; } .advisory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 680px) { .vertical-intro, .vertical-body { padding: 28px; } .metric-strip, .advisory-grid, .outcome-row { grid-template-columns: 1fr; } .outcome-row em { display: none; } }
+  @media (max-width: 960px) { .brand { min-width: 180px !important; } .brand img { width: 180px !important; } .nav-links { background: rgba(255, 255, 255, 0.96) !important; border: 1px solid var(--line) !important; color: var(--muted) !important; } .nav-links a:hover, .nav-links a.active { background: var(--ice) !important; color: var(--blue) !important; } .vertical-intro, .approach-block { grid-template-columns: 1fr; } .advisory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 680px) { .brand { min-width: 155px !important; } .brand img { width: 155px !important; } .vertical-intro, .vertical-body { padding: 28px; } .metric-strip, .advisory-grid, .outcome-row { grid-template-columns: 1fr; } .outcome-row em { display: none; } }
 `;
 document.head.appendChild(headerStyle);
 
