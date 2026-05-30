@@ -40,7 +40,7 @@
             TransactIQ is interested in connecting with experienced professionals who understand payments, analytics, risk, implementation and commercial performance.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.html">Introduce Yourself</a>
+            <a class="btn btn-primary" href="#careers-form">Introduce Yourself</a>
           </div>
         </div>
       </section>
@@ -54,7 +54,7 @@
               TransactIQ’s work is shaped by clients who need serious payments capability, not generic consulting theatre. The people we want to hear from are commercially aware, analytically strong and comfortable turning complexity into practical decisions.
             </p>
             <p>
-              Current opportunities will be shared as specific needs emerge. In the meantime, experienced specialists are welcome to make contact and introduce their background.
+              Current opportunities will be shared as specific needs emerge. In the meantime, experienced specialists are welcome to introduce their background and share the kind of engagements they are best placed to support.
             </p>
           </div>
           <div class="quote-card reveal">
@@ -72,7 +72,7 @@
               <h2>The capabilities we are most interested in connecting with.</h2>
             </div>
             <p>
-              This page is intentionally simple for launch, but it gives TransactIQ a professional place for potential collaborators and future hires to engage.
+              This page gives potential collaborators and future hires a professional place to engage directly with TransactIQ.
             </p>
           </div>
 
@@ -97,15 +97,86 @@
         </div>
       </section>
 
+      <section class="section" id="careers-form">
+        <div class="section-heading reveal">
+          <div>
+            <div class="kicker">Introduce yourself</div>
+            <h2>Share your profile with TransactIQ.</h2>
+          </div>
+          <p>
+            Use the form below to send your background, LinkedIn profile and CV. TransactIQ will review profiles against future project and advisory needs.
+          </p>
+        </div>
+
+        <div class="split-panel">
+          <form class="contact-form reveal" name="careers-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+            <input type="hidden" name="form-name" value="careers-application">
+            <p class="hidden" style="display:none;">
+              <label>Do not fill this out if you are human: <input name="bot-field"></label>
+            </p>
+
+            <label for="career-name">Full name</label>
+            <input id="career-name" name="name" type="text" autocomplete="name" required>
+
+            <label for="career-email">Email address</label>
+            <input id="career-email" name="email" type="email" autocomplete="email" required>
+
+            <label for="career-phone">Phone or WhatsApp number</label>
+            <input id="career-phone" name="phone" type="tel" autocomplete="tel">
+
+            <label for="career-expertise">Primary area of expertise</label>
+            <select id="career-expertise" name="area_of_expertise" required>
+              <option value="">Select an area</option>
+              <option value="Payments advisory">Payments advisory</option>
+              <option value="Data and analytics">Data and analytics</option>
+              <option value="Risk and portfolio management">Risk and portfolio management</option>
+              <option value="Implementation and delivery">Implementation and delivery</option>
+              <option value="Training and capability building">Training and capability building</option>
+              <option value="Other specialist capability">Other specialist capability</option>
+            </select>
+
+            <label for="career-experience">Years of relevant experience</label>
+            <input id="career-experience" name="years_of_experience" type="text" placeholder="e.g. 10+ years">
+
+            <label for="career-linkedin">LinkedIn profile</label>
+            <input id="career-linkedin" name="linkedin" type="url" placeholder="https://www.linkedin.com/in/your-profile" required>
+
+            <label for="career-cv">Upload your CV</label>
+            <input id="career-cv" name="cv" type="file" accept=".pdf,.doc,.docx" required>
+
+            <label for="career-message">Short introduction</label>
+            <textarea id="career-message" name="message" rows="6" placeholder="Tell us about your background, the type of work you are interested in, and where you believe you could add value." required></textarea>
+
+            <label class="consent-row" for="career-consent">
+              <input id="career-consent" name="consent" type="checkbox" required>
+              <span>I consent to TransactIQ storing and reviewing my submitted information for future career, consulting or collaboration opportunities.</span>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Submit Profile</button>
+          </form>
+
+          <aside class="contact-card reveal">
+            <div class="kicker">What happens next</div>
+            <h3>Profiles are reviewed against future advisory needs.</h3>
+            <p>
+              TransactIQ is building a specialist network around payments advisory, data, analytics, risk and delivery. Submitting your profile does not mean there is an open role today, but it gives the team a structured way to review your background when relevant opportunities emerge.
+            </p>
+            <p>
+              CV uploads should be submitted as PDF, DOC or DOCX files. LinkedIn profiles help the team quickly understand your experience, market exposure and professional background.
+            </p>
+          </aside>
+        </div>
+      </section>
+
       <section class="final-cta">
         <div class="cta-panel reveal">
           <div>
             <h2>Interested in working with TransactIQ?</h2>
             <p>
-              Send a short introduction with your area of expertise, relevant experience and the kind of work you are interested in supporting.
+              Share your profile, CV and LinkedIn details so the team can consider your background for future advisory, analytics and implementation needs.
             </p>
           </div>
-          <a class="btn btn-primary" href="contact.html">Make Contact</a>
+          <a class="btn btn-primary" href="#careers-form">Submit Your Profile</a>
         </div>
       </section>
     </main>
