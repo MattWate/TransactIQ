@@ -136,5 +136,42 @@
     </footer>
   </div>
   <script src="assets/js/main.js"></script>
+  <script>
+    (() => {
+      const interestSelect = document.querySelector('#interest');
+      if (!interestSelect) return;
+
+      const interestMap = {
+        commercial: 'Commercial payments',
+        consumer: 'Consumer portfolio optimisation',
+        ai: 'Data science and AI',
+        implementation: 'Implementation support',
+        careers: 'Careers or collaboration'
+      };
+
+      const normaliseInterest = (value = '') => value.trim().toLowerCase().replace(/\s+/g, '-');
+      const params = new URLSearchParams(window.location.search);
+      let selectedInterest = interestMap[normaliseInterest(params.get('interest') || '')];
+
+      if (!selectedInterest && document.referrer) {
+        try {
+          const referrer = new URL(document.referrer);
+          const path = referrer.pathname.toLowerCase();
+          if (path.includes('commercial-consulting')) selectedInterest = interestMap.commercial;
+          if (path.includes('consumer-consulting')) selectedInterest = interestMap.consumer;
+          if (path.includes('careers')) selectedInterest = interestMap.careers;
+        } catch (error) {
+          selectedInterest = '';
+        }
+      }
+
+      if (!selectedInterest) return;
+
+      const matchingOption = Array.from(interestSelect.options).find((option) => option.text === selectedInterest);
+      if (matchingOption) {
+        interestSelect.value = matchingOption.value || matchingOption.text;
+      }
+    })();
+  </script>
 </body>
 </html>
