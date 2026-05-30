@@ -6,6 +6,71 @@
   <title>Careers | TransactIQ</title>
   <meta name="description" content="Connect with TransactIQ for specialist payments advisory, analytics, risk and implementation opportunities.">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .careers-sticky-cta {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      max-width: 520px;
+      padding: 16px 18px 16px 20px;
+      border: 1px solid rgba(32, 198, 223, 0.22);
+      border-radius: 24px;
+      background: rgba(6, 27, 58, 0.90);
+      color: var(--white);
+      box-shadow: 0 20px 54px rgba(6, 27, 58, 0.28);
+      backdrop-filter: blur(18px);
+      transform: translateY(24px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    .careers-sticky-cta.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .careers-sticky-copy strong {
+      display: block;
+      color: var(--white);
+      font-family: "Inter Tight", Inter, sans-serif;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 3px;
+    }
+
+    .careers-sticky-copy span {
+      display: block;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.84rem;
+      line-height: 1.35;
+    }
+
+    .careers-sticky-cta .btn {
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 760px) {
+      .careers-sticky-cta {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        max-width: none;
+        padding: 14px;
+        border-radius: 20px;
+      }
+
+      .careers-sticky-copy span { display: none; }
+      .careers-sticky-copy strong { font-size: 0.92rem; margin-bottom: 0; }
+      .careers-sticky-cta .btn { padding-inline: 16px; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -168,7 +233,7 @@
         </div>
       </section>
 
-      <section class="final-cta">
+      <section class="final-cta" id="careers-final-cta">
         <div class="cta-panel reveal">
           <div>
             <h2>Interested in working with TransactIQ?</h2>
@@ -199,6 +264,48 @@
       </div>
     </footer>
   </div>
+
+  <div class="careers-sticky-cta" data-careers-sticky aria-hidden="true">
+    <div class="careers-sticky-copy">
+      <strong>Interested in working with TransactIQ?</strong>
+      <span>Send your CV and LinkedIn profile to the team.</span>
+    </div>
+    <a class="btn btn-primary" href="#careers-form">Submit Your Profile</a>
+  </div>
+
   <script src="assets/js/main.js"></script>
+  <script>
+    (() => {
+      const sticky = document.querySelector('[data-careers-sticky]');
+      const formSection = document.querySelector('#careers-form');
+      const finalCta = document.querySelector('#careers-final-cta');
+      if (!sticky || !formSection) return;
+
+      let formInView = false;
+      let finalInView = false;
+
+      const setVisibility = () => {
+        const pastHero = window.scrollY > Math.max(260, window.innerHeight * 0.45);
+        const shouldShow = pastHero && !formInView && !finalInView;
+        sticky.classList.toggle('visible', shouldShow);
+        sticky.setAttribute('aria-hidden', String(!shouldShow));
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === formSection) formInView = entry.isIntersecting;
+          if (entry.target === finalCta) finalInView = entry.isIntersecting;
+        });
+        setVisibility();
+      }, { threshold: 0.12, rootMargin: '0px 0px -18% 0px' });
+
+      observer.observe(formSection);
+      if (finalCta) observer.observe(finalCta);
+
+      window.addEventListener('scroll', setVisibility, { passive: true });
+      window.addEventListener('resize', setVisibility);
+      setVisibility();
+    })();
+  </script>
 </body>
 </html>
