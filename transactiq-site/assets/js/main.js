@@ -1,7 +1,6 @@
 [
   ['icon','image/x-icon','assets/images/favicon.ico',''],
   ['icon','image/png','assets/images/favicon-32x32.png','32x32'],
-  ['icon','image/png','assets/images/favicon-16x16.png','16x16'],
   ['apple-touch-icon','','assets/images/apple-touch-icon.png','180x180']
 ].forEach(([rel,type,href,sizes]) => {
   const link = document.createElement('link');
@@ -36,6 +35,8 @@ document.head.appendChild(style);
 const layoutFixStyle = document.createElement('style');
 layoutFixStyle.textContent = `
   main{padding-top:25px!important;}
+  #contact-form{scroll-margin-top:118px!important;outline:none!important;}
+  #contact-form:focus{box-shadow:0 16px 44px rgba(6,27,58,.105),0 0 0 4px rgba(32,198,223,.16)!important;}
   @media(min-width:901px){
     .site-footer .footer-inner{display:grid!important;grid-template-columns:auto minmax(520px,1fr) auto!important;align-items:center!important;gap:28px!important;max-width:1180px!important;}
     .site-footer .footer-brand{min-width:0!important;}
@@ -56,6 +57,29 @@ const body = document.body;
 const header = document.querySelector('.site-header');
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav-links a');
+const isCareersPage = window.location.pathname.toLowerCase().includes('careers');
+
+if (!isCareersPage) {
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const rawHref = link.getAttribute('href') || '';
+    if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('mailto:') || rawHref.startsWith('tel:')) return;
+
+    let url;
+    try {
+      url = new URL(rawHref, window.location.href);
+    } catch (error) {
+      return;
+    }
+
+    const pointsToContact = url.pathname.toLowerCase().endsWith('/contact.html');
+    const isPrimaryContactCta = link.classList.contains('nav-cta') || link.classList.contains('btn');
+
+    if (pointsToContact && isPrimaryContactCta && !url.hash) {
+      const localHref = `contact.html${url.search || ''}#contact-form`;
+      link.setAttribute('href', localHref);
+    }
+  });
+}
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
@@ -78,6 +102,19 @@ const onScroll = () => {
 };
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
+
+const focusAnchorTarget = () => {
+  if (window.location.hash !== '#contact-form') return;
+  const target = document.querySelector('#contact-form');
+  if (!target) return;
+  window.setTimeout(() => {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    target.focus({ preventScroll: true });
+  }, 80);
+};
+
+focusAnchorTarget();
+window.addEventListener('hashchange', focusAnchorTarget);
 
 const revealEls = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && revealEls.length) {
