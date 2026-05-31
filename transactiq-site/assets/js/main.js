@@ -33,6 +33,10 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+const headerOffsetStyle = document.createElement('style');
+headerOffsetStyle.textContent = `main{padding-top:25px!important;}`;
+document.head.appendChild(headerOffsetStyle);
+
 const body = document.body;
 const header = document.querySelector('.site-header');
 const navToggle = document.querySelector('.nav-toggle');
