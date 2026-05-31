@@ -56,6 +56,37 @@
       white-space: nowrap;
     }
 
+    .contact-form .consent-row {
+      display: grid !important;
+      grid-template-columns: 18px minmax(0, 1fr) !important;
+      align-items: start !important;
+      gap: 12px !important;
+      margin: 8px 0 22px !important;
+      cursor: pointer;
+    }
+
+    .contact-form .consent-row input[type="checkbox"] {
+      width: 16px !important;
+      height: 16px !important;
+      margin: 3px 0 0 !important;
+      padding: 0 !important;
+      justify-self: start !important;
+      flex: 0 0 auto !important;
+    }
+
+    .contact-form .consent-row span {
+      display: block !important;
+      line-height: 1.45 !important;
+      font-size: 0.92rem !important;
+      color: var(--ink) !important;
+    }
+
+    .contact-form .consent-row + .btn {
+      display: inline-flex !important;
+      width: fit-content !important;
+      margin-top: 0 !important;
+    }
+
     @media (max-width: 760px) {
       .careers-sticky-cta {
         left: 14px;
