@@ -39,6 +39,8 @@ document.head.appendChild(style);
 const layoutFixStyle = document.createElement('style');
 layoutFixStyle.textContent = `
   main{padding-top:25px!important;}
+  .hero h1,.page-hero h1{font-size:clamp(3rem,5.4vw,5.4rem)!important;line-height:1.03!important;letter-spacing:-.025em!important;word-spacing:.04em!important;max-width:980px!important;}
+  .hero h1{font-size:clamp(3.1rem,5.6vw,5.6rem)!important;}
   #contact-form{scroll-margin-top:118px!important;outline:none!important;}
   #contact-form:focus{box-shadow:0 16px 44px rgba(6,27,58,.105),0 0 0 4px rgba(32,198,223,.16)!important;}
   @media(min-width:901px){
@@ -53,6 +55,9 @@ layoutFixStyle.textContent = `
     .site-footer .footer-brand img{width:210px!important;max-width:210px!important;}
     .site-footer .footer-links{gap:16px!important;font-size:.82rem!important;}
     .site-footer .footer-meta{font-size:.82rem!important;}
+  }
+  @media(max-width:680px){
+    .hero h1,.page-hero h1{font-size:clamp(2.35rem,11vw,3.35rem)!important;line-height:1.06!important;letter-spacing:-.015em!important;word-spacing:.03em!important;}
   }
 `;
 document.head.appendChild(layoutFixStyle);
