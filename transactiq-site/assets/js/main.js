@@ -52,6 +52,12 @@ layoutFixStyle.textContent = `
   .editorial .dual-actions{margin-top:32px!important;}
   #contact-form{scroll-margin-top:118px!important;outline:none!important;}
   #contact-form:focus{box-shadow:0 16px 44px rgba(6,27,58,.105),0 0 0 4px rgba(32,198,223,.16)!important;}
+  @media(min-width:961px){
+    .commercial-verticals .segmented-heading{font-size:clamp(1.55rem,2.25vw,2.6rem)!important;line-height:1!important;letter-spacing:-.032em!important;flex-wrap:nowrap!important;white-space:nowrap!important;}
+    .consumer-verticals .segmented-heading{font-size:clamp(1.25rem,1.85vw,1.95rem)!important;line-height:1!important;letter-spacing:-.025em!important;flex-wrap:nowrap!important;white-space:nowrap!important;}
+    .commercial-verticals .segmented-heading span,.consumer-verticals .segmented-heading span{padding-right:12px!important;margin-right:12px!important;}
+    .commercial-verticals .vertical-intro-copy,.consumer-verticals .vertical-intro-copy{max-width:100%!important;}
+  }
   @media(min-width:901px){
     .hero-inner{align-items:start!important;}
     .hero-panel{align-self:start!important;margin-top:64px!important;}
