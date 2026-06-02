@@ -23,6 +23,10 @@ document.querySelectorAll('.metric-card strong').forEach((item) => {
   item.textContent = item.textContent.replaceAll('⇧', '↑');
 });
 
+document.querySelectorAll('.hero h1, .page-hero h1').forEach((heading) => {
+  heading.textContent = heading.textContent.trim().replace(/\.+$/, '');
+});
+
 const style = document.createElement('style');
 style.textContent = `
   :root{--ink:#071424;--navy:#061B3A;--navy-2:#08244D;--blue:#0A4FD3;--cyan:#20C6DF;--ice:#E3ECF5;--slate-panel:#D5E2EF;--cyan-wash:#DFF6FA;--white:#FFFFFF;--muted:#4F6072;--line:#C7D7E6;--shadow:0 24px 80px rgba(6,27,58,.18);--soft-shadow:0 16px 46px rgba(6,27,58,.12)}
@@ -167,7 +171,7 @@ document.querySelectorAll('[data-tabs]').forEach((group) => {
         item.classList.toggle('active', active);
         item.setAttribute('aria-selected', String(active));
       });
-      panels.forEach((panel) => panel.classList.toggle('active', panel.dataset.tabPanel === target));
+      panels.forEach((panel) => panel.classList.toggle('active', panel.datasetTabPanel === target));
     });
   });
 });
