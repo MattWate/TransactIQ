@@ -171,7 +171,7 @@ document.querySelectorAll('[data-tabs]').forEach((group) => {
         item.classList.toggle('active', active);
         item.setAttribute('aria-selected', String(active));
       });
-      panels.forEach((panel) => panel.classList.toggle('active', panel.datasetTabPanel === target));
+      panels.forEach((panel) => panel.classList.toggle('active', panel.dataset.tabPanel === target));
     });
   });
 });
