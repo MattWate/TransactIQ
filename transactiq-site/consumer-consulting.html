@@ -6,6 +6,89 @@
   <title>Consumer Consulting | TransactIQ</title>
   <meta name="description" content="Consumer payment portfolio optimisation across portfolio management, risk management, AI and digital optimisation.">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .consumer-verticals .vertical-intro {
+      grid-template-columns: 1fr !important;
+      gap: 28px !important;
+      align-items: start !important;
+    }
+
+    .vertical-intro-copy {
+      max-width: 1040px;
+    }
+
+    .segmented-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0;
+      margin: 12px 0 18px;
+      font-family: "Inter Tight", Inter, sans-serif;
+      font-size: clamp(2.6rem, 5vw, 5.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      color: var(--white);
+      text-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .segmented-heading span {
+      display: inline-flex;
+      align-items: center;
+      padding-right: 26px;
+      margin-right: 26px;
+    }
+
+    .segmented-heading span:not(:last-child) {
+      border-right: 2px solid rgba(255,255,255,.42);
+    }
+
+    .consumer-verticals .vertical-intro p {
+      max-width: 940px;
+      margin-top: 0;
+    }
+
+    .consumer-verticals .metric-strip {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      width: 100%;
+    }
+
+    .consumer-verticals .metric-card {
+      min-height: 148px;
+    }
+
+    @media (max-width: 960px) {
+      .consumer-verticals .metric-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .segmented-heading {
+        font-size: clamp(2.05rem, 12vw, 3.1rem);
+        line-height: 1.02;
+      }
+
+      .segmented-heading span {
+        width: 100%;
+        padding-right: 0;
+        margin-right: 0;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-right: 0 !important;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+      }
+
+      .segmented-heading span:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .consumer-verticals .metric-strip {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -51,7 +134,7 @@
         </div>
       </section>
 
-      <section class="soft-section">
+      <section class="soft-section consumer-verticals">
         <div class="section">
           <div class="section-heading reveal">
             <div><div class="kicker">Consumer disciplines</div><h2>Three connected pathways for stronger portfolio performance.</h2></div>
@@ -62,22 +145,115 @@
             <div class="tab-toolbar" role="tablist" aria-label="Consumer consulting disciplines">
               <button class="tab-button active" type="button" data-tab-target="portfolio" aria-selected="true">Portfolio Management</button>
               <button class="tab-button" type="button" data-tab-target="risk" aria-selected="false">Risk Management</button>
-              <button class="tab-button" type="button" data-tab-target="digital" aria-selected="false">AI & Digital Optimisation</button>
+              <button class="tab-button" type="button" data-tab-target="digital" aria-selected="false">AI & Digital Payments</button>
             </div>
 
             <article class="tab-panel active" data-tab-panel="portfolio">
               <div class="vertical-module">
-                <div class="vertical-intro"><div><div class="kicker">Portfolio Management</div><h2>Segmentation. Discipline. Lifecycle.</h2><p>Strong portfolios are not built on volume alone. They are built on structured segmentation, pricing discipline and lifecycle optimisation. TransactIQ helps issuers maximise margin, retention and product mix across customer cohorts.</p></div><div class="metric-strip"><div class="metric-card"><strong>8+</strong><span>Advisory disciplines across the portfolio performance lifecycle.</span></div><div class="metric-card"><strong>⇧Mgn</strong><span>Improved margin through pricing and interchange optimisation.</span></div><div class="metric-card"><strong>CLV</strong><span>Customer lifetime value modelling for retention and growth decisions.</span></div><div class="metric-card"><strong>↓Lkg</strong><span>Revenue leakage diagnostics identifying hidden margin erosion.</span></div></div></div>
-                <div class="vertical-body"><div class="kicker">What we advise on</div><div class="advisory-grid"><div class="advisory-card"><h3>Portfolio segmentation</h3><p>Behavioural segmentation to identify high-value cohorts and growth opportunities.</p></div><div class="advisory-card"><h3>Pricing architecture</h3><p>Fee structure optimisation balancing revenue capture and customer sensitivity.</p></div><div class="advisory-card"><h3>Interchange performance</h3><p>Category mix analysis and optimisation strategies.</p></div><div class="advisory-card"><h3>Revolving strategy</h3><p>Cohort-level strategies balancing margin, behaviour and risk-adjusted return.</p></div><div class="advisory-card"><h3>CLV modelling</h3><p>Frameworks to prioritise acquisition, retention and investment allocation.</p></div><div class="advisory-card"><h3>Product rationalisation</h3><p>Frameworks for sunsetting underperforming products and migrating customers.</p></div></div><div class="outcome-flow"><div class="outcome-row"><strong>01</strong><span>Improved margin through pricing and interchange discipline</span><em>→</em></div><div class="outcome-row"><strong>02</strong><span>Stronger customer lifetime value across acquisition and retention</span><em>→</em></div><div class="outcome-row"><strong>03</strong><span>Optimised product mix aligned to growth objectives</span><em>→</em></div><div class="outcome-row"><strong>04</strong><span>Data-driven growth strategy grounded in behavioural analytics</span><em>→</em></div></div><div class="approach-block"><blockquote>Volume without margin discipline is a trap. The best portfolios are engineered — not accumulated.</blockquote><a class="btn btn-primary" href="contact.html#contact-form">Book a Strategy Call</a></div></div>
+                <div class="vertical-intro">
+                  <div class="vertical-intro-copy">
+                    <div class="kicker">Portfolio Management</div>
+                    <h2 class="segmented-heading"><span>Portfolio growth</span><span>Margin discipline</span><span>Customer lifetime value</span></h2>
+                    <p>TransactIQ helps payments businesses improve portfolio performance across acquisition, activation, usage, retention and margin optimisation. We combine market entry strategy, lifecycle interventions, loyalty economics and product rationalisation to identify growth opportunities and reduce hidden portfolio drag.</p>
+                  </div>
+                  <div class="metric-strip">
+                    <div class="metric-card"><strong>10+</strong><span>Advisory disciplines across the payments performance lifecycle.</span></div>
+                    <div class="metric-card"><strong>↑ Mgn</strong><span>Improved margin through pricing discipline, interchange optimisation and revolving balance build.</span></div>
+                    <div class="metric-card"><strong>CLV</strong><span>Customer lifetime value growth across acquisition, activation, usage and retention.</span></div>
+                    <div class="metric-card"><strong>↓ Lkg</strong><span>Revenue leakage diagnostics identifying hidden margin erosion and portfolio drag.</span></div>
+                  </div>
+                </div>
+                <div class="vertical-body">
+                  <div class="kicker">What we advise on</div>
+                  <div class="advisory-grid">
+                    <div class="advisory-card"><h3>Growth Strategy & Market Entry</h3><p>Market sizing, competitive positioning and entry sequencing for payments businesses expanding into new geographies or segments.</p></div>
+                    <div class="advisory-card"><h3>Acquisition Optimisation</h3><p>Channel mix, offer design and cross-sell frameworks that improve booking quality and reduce cost per acquired account.</p></div>
+                    <div class="advisory-card"><h3>Customer Lifecycle Optimisation</h3><p>Structured intervention strategies across activation, early months on book, usage stimulation and retention to maximise customer tenure and value.</p></div>
+                    <div class="advisory-card"><h3>Loyalty Program Design & Optimisation</h3><p>Reward architecture, earn/burn mechanics and programme economics that drive engagement without eroding margin.</p></div>
+                    <div class="advisory-card"><h3>Revolving Balance Build</h3><p>Behavioural nudge strategies, instalment propositions and pricing structures designed to grow revolving balances profitably.</p></div>
+                    <div class="advisory-card"><h3>Product Rationalisation</h3><p>Frameworks for sunsetting underperforming products, consolidating overlapping propositions and migrating customers with minimal attrition.</p></div>
+                  </div>
+                  <div class="outcome-flow">
+                    <div class="outcome-row"><strong>01</strong><span>Accelerated revenue growth through disciplined market entry, acquisition optimisation and cross-sell execution</span><em>→</em></div>
+                    <div class="outcome-row"><strong>02</strong><span>Stronger customer lifetime value across activation, early lifecycle, usage stimulation and retention</span><em>→</em></div>
+                    <div class="outcome-row"><strong>03</strong><span>Improved margin through pricing discipline, interchange optimisation and revolving balance build</span><em>→</em></div>
+                    <div class="outcome-row"><strong>04</strong><span>Higher engagement and leaner portfolio economics through loyalty design and product rationalisation</span><em>→</em></div>
+                  </div>
+                  <div class="approach-block"><blockquote>Strong portfolio performance comes from disciplined growth, deliberate customer lifecycle design and relentless margin visibility.</blockquote><a class="btn btn-primary" href="contact.html#contact-form">Book a Strategy Call</a></div>
+                </div>
               </div>
             </article>
 
             <article class="tab-panel" data-tab-panel="risk">
-              <div class="vertical-module"><div class="vertical-intro"><div><div class="kicker">Risk Management</div><h2>Precision, not restriction.</h2><p>Risk optimisation is not about restriction. It is about precision. TransactIQ helps issuers and payment businesses balance approval performance, loss control and fraud exposure across every portfolio segment.</p></div><div class="metric-strip"><div class="metric-card"><strong>⇧Appr</strong><span>Improved approval rates through scorecard refinement.</span></div><div class="metric-card"><strong>↓Loss</strong><span>Reduced fraud losses through enhanced detection frameworks.</span></div><div class="metric-card"><strong>↓CB</strong><span>Lower chargeback rates through targeted reduction strategy.</span></div><div class="metric-card"><strong>360°</strong><span>Portfolio-level risk visibility across credit, fraud and compliance.</span></div></div></div><div class="vertical-body"><div class="kicker">What we advise on</div><div class="advisory-grid"><div class="advisory-card"><h3>Credit risk strategy</h3><p>End-to-end review across origination, management and collections.</p></div><div class="advisory-card"><h3>Approval vs loss balancing</h3><p>Calibration of approval thresholds across the risk-return boundary.</p></div><div class="advisory-card"><h3>Fraud detection</h3><p>Detection architecture review across rules, models and alerts.</p></div><div class="advisory-card"><h3>Risk segmentation</h3><p>Scorecard refinement and challenger strategies for sharper differentiation.</p></div><div class="advisory-card"><h3>Early warning systems</h3><p>Behavioural signals and trigger frameworks for proactive management.</p></div><div class="advisory-card"><h3>Governance alignment</h3><p>Risk governance frameworks aligned to regulatory expectations.</p></div></div><div class="outcome-flow"><div class="outcome-row"><strong>01</strong><span>Improved approval performance without compromising tolerance</span><em>→</em></div><div class="outcome-row"><strong>02</strong><span>Reduced fraud losses through rule precision</span><em>→</em></div><div class="outcome-row"><strong>03</strong><span>Lower chargeback rates via targeted frameworks</span><em>→</em></div><div class="outcome-row"><strong>04</strong><span>Controlled credit exposure with early warning segmentation</span><em>→</em></div></div><div class="approach-block"><blockquote>The best risk frameworks do not say no more — they say yes more precisely. Precision is the competitive advantage.</blockquote><a class="btn btn-primary" href="contact.html#contact-form">Book a Strategy Call</a></div></div></div>
+              <div class="vertical-module">
+                <div class="vertical-intro">
+                  <div class="vertical-intro-copy">
+                    <div class="kicker">Risk Management</div>
+                    <h2 class="segmented-heading"><span>Smarter approvals</span><span>Lower losses</span><span>Stronger recovery</span></h2>
+                    <p>TransactIQ helps payments businesses strengthen risk performance without suppressing growth. We review credit policy, segmentation, fraud controls and collections strategies to improve approval quality, reduce losses and create earlier, more targeted interventions across the full credit lifecycle.</p>
+                  </div>
+                  <div class="metric-strip">
+                    <div class="metric-card"><strong>↓ Default</strong><span>Reduced default rates through smarter segmentation, scorecard refinement and proactive early warning intervention.</span></div>
+                    <div class="metric-card"><strong>↑ Appr</strong><span>Higher approval rates without compromising loss performance, driven by policy optimisation and champion-challenger testing.</span></div>
+                    <div class="metric-card"><strong>↓ Fraud</strong><span>Lower fraud exposure through detection architecture review, rules optimisation and behavioural monitoring frameworks.</span></div>
+                    <div class="metric-card"><strong>↑ Rec</strong><span>Stronger collections recovery through diagnostic review, treatment segmentation and strategy redesign.</span></div>
+                  </div>
+                </div>
+                <div class="vertical-body">
+                  <div class="kicker">What we advise on</div>
+                  <div class="advisory-grid">
+                    <div class="advisory-card"><h3>Credit Risk Strategy</h3><p>End-to-end review of credit risk frameworks across origination, underwriting, line management and collections, with implementation support throughout.</p></div>
+                    <div class="advisory-card"><h3>Risk Segmentation & Scorecards</h3><p>Champion-challenger strategies, application and behavioural scorecard development, and segmentation frameworks that sharpen risk differentiation and approval precision.</p></div>
+                    <div class="advisory-card"><h3>Credit Policy & Underwriting</h3><p>Structured review of credit policy, underwriting standards and decision frameworks to balance approval performance against loss exposure.</p></div>
+                    <div class="advisory-card"><h3>Credit Line & Authorisation Management</h3><p>Credit line optimisation, overlimit authorisation strategy and authorisation rules refinement to improve margin while managing portfolio risk.</p></div>
+                    <div class="advisory-card"><h3>Collections Health Check</h3><p>Diagnostic review of collections strategy, segmentation and treatment paths to identify performance gaps and recovery improvement opportunities.</p></div>
+                    <div class="advisory-card"><h3>Fraud Detection & Prevention</h3><p>Detection architecture review across rules, models and alert frameworks, designed to reduce fraud exposure and strengthen portfolio protection.</p></div>
+                  </div>
+                  <div class="outcome-flow">
+                    <div class="outcome-row"><strong>01</strong><span>Higher approval rates with improved risk precision through scorecard and policy optimisation</span><em>→</em></div>
+                    <div class="outcome-row"><strong>02</strong><span>Reduced credit and fraud losses through enhanced segmentation, detection and collections strategy</span><em>→</em></div>
+                    <div class="outcome-row"><strong>03</strong><span>Better portfolio economics through credit line optimisation and authorisation rules refinement</span><em>→</em></div>
+                    <div class="outcome-row"><strong>04</strong><span>Stronger risk governance and compliance alignment across the full credit lifecycle</span><em>→</em></div>
+                  </div>
+                  <div class="approach-block"><blockquote>Effective risk management is not about saying no more often. It is about making better decisions earlier, with sharper controls and clearer treatment strategies.</blockquote><a class="btn btn-primary" href="contact.html#contact-form">Book a Strategy Call</a></div>
+                </div>
+              </div>
             </article>
 
             <article class="tab-panel" data-tab-panel="digital">
-              <div class="vertical-module"><div class="vertical-intro"><div><div class="kicker">AI & Digital Optimisation</div><h2>Funnel precision. Digital growth.</h2><p>Digital channels define modern consumer payment growth, but funnel inefficiencies often suppress performance. TransactIQ diagnoses drop-off, accelerates activation and engineers digital journeys that convert and retain at scale.</p></div><div class="metric-strip"><div class="metric-card"><strong>⇧Conv</strong><span>Higher approval and activation rates through funnel diagnostics.</span></div><div class="metric-card"><strong>↓CAC</strong><span>Lower acquisition cost through conversion and cohort optimisation.</span></div><div class="metric-card"><strong>360°</strong><span>Full journey mapping from acquisition to engagement and cross-sell.</span></div><div class="metric-card"><strong>⇧Stk</strong><span>Stronger stickiness through lifecycle and tokenisation strategy.</span></div></div></div><div class="vertical-body"><div class="kicker">What we advise on</div><div class="advisory-grid"><div class="advisory-card"><h3>Funnel optimisation</h3><p>End-to-end analysis to identify and resolve conversion drop-off.</p></div><div class="advisory-card"><h3>Conversion diagnostics</h3><p>Step-level frameworks that pinpoint friction in the application journey.</p></div><div class="advisory-card"><h3>Journey mapping</h3><p>UX and performance analysis across mobile and web digital channels.</p></div><div class="advisory-card"><h3>Onboarding reduction</h3><p>Streamlined onboarding flows that reduce abandonment and accelerate first use.</p></div><div class="advisory-card"><h3>Wallet activation</h3><p>Strategy for wallet provisioning, token push and contactless activation.</p></div><div class="advisory-card"><h3>Lifecycle design</h3><p>Behavioural trigger frameworks that sustain engagement across the lifecycle.</p></div></div><div class="outcome-flow"><div class="outcome-row"><strong>01</strong><span>Higher approval and activation through friction elimination</span><em>→</em></div><div class="outcome-row"><strong>02</strong><span>Improved engagement across app and wallet channels</span><em>→</em></div><div class="outcome-row"><strong>03</strong><span>Lower acquisition cost through cohort optimisation</span><em>→</em></div><div class="outcome-row"><strong>04</strong><span>Stronger stickiness through feature adoption</span><em>→</em></div></div><div class="approach-block"><blockquote>Digital growth is not a marketing problem — it is an engineering problem. We fix the funnel before we fill it.</blockquote><a class="btn btn-primary" href="contact.html#contact-form">Book a Strategy Call</a></div></div></div>
+              <div class="vertical-module">
+                <div class="vertical-intro">
+                  <div class="vertical-intro-copy">
+                    <div class="kicker">AI & Digital Payments</div>
+                    <h2 class="segmented-heading"><span>AI roadmap</span><span>Digital journeys</span><span>Conversion growth</span></h2>
+                    <p>Digital channels define modern payments growth, but funnel inefficiencies and fragmented journeys suppress performance. TransactIQ diagnoses drop-off, designs high-converting digital experiences and builds the campaign and technology capability to grow at scale.</p>
+                  </div>
+                  <div class="metric-strip">
+                    <div class="metric-card"><strong>↑ Conv</strong><span>Higher approval and activation rates through funnel diagnostics and journey optimisation.</span></div>
+                    <div class="metric-card"><strong>↓ CAC</strong><span>Lower acquisition cost through conversion improvement, audience precision and campaign efficiency.</span></div>
+                    <div class="metric-card"><strong>360°</strong><span>Full journey mapping from acquisition through activation, engagement and cross-sell.</span></div>
+                    <div class="metric-card"><strong>↑ Stk</strong><span>Stronger stickiness through lifecycle design, mobile experience and tokenisation strategy.</span></div>
+                  </div>
+                </div>
+                <div class="vertical-body">
+                  <div class="kicker">What we advise on</div>
+                  <div class="advisory-grid">
+                    <div class="advisory-card"><h3>AI & Digital Payments Strategy</h3><p>Defining the digital roadmap for payments businesses, from AI adoption priorities to channel strategy and technology investment sequencing.</p></div>
+                    <div class="advisory-card"><h3>Digital Value Propositions</h3><p>Designing compelling digital-first propositions that drive acquisition, differentiate on experience and build long-term customer preference.</p></div>
+                    <div class="advisory-card"><h3>Digital Journey Mapping</h3><p>End-to-end mapping of customer journeys across digital touchpoints to identify friction, drop-off and experience gaps that suppress performance.</p></div>
+                    <div class="advisory-card"><h3>Conversion Diagnostics</h3><p>Step-level analysis of application and onboarding funnels to pinpoint where and why customers disengage, with targeted remediation frameworks.</p></div>
+                    <div class="advisory-card"><h3>Digital Campaign Design & Execution</h3><p>Data-led campaign strategy, audience segmentation and execution frameworks that improve targeting precision and reduce cost per acquisition.</p></div>
+                    <div class="advisory-card"><h3>Mobile & Web Development</h3><p>Build and implementation support for digital payments experiences, from mobile-first interfaces to web journeys optimised for conversion and usability.</p></div>
+                  </div>
+                  <div class="outcome-flow">
+                    <div class="outcome-row"><strong>01</strong><span>Higher conversion and activation rates through funnel diagnostics and friction elimination</span><em>→</em></div>
+                    <div class="outcome-row"><strong>02</strong><span>Lower acquisition cost through campaign precision, audience targeting and digital optimisation</span><em>→</em></div>
+                    <div class="outcome-row"><strong>03</strong><span>Stronger digital propositions that drive engagement across mobile, web and wallet channels</span><em>→</em></div>
+                    <div class="outcome-row"><strong>04</strong><span>Accelerated capability build through end-to-end digital journey design and implementation support</span><em>→</em></div>
+                  </div>
+                  <div class="approach-block"><blockquote>Digital payments growth depends on more than channels. It requires connected strategy, journey design, campaign execution and technology delivery.</blockquote><a class="btn btn-primary" href="contact.html#contact-form">Book a Strategy Call</a></div>
+                </div>
+              </div>
             </article>
           </div>
         </div>
