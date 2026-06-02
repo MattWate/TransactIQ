@@ -11,8 +11,12 @@
   document.head.appendChild(link);
 });
 
-document.querySelectorAll('.brand img, .footer-brand img').forEach((img) => {
-  img.src = 'assets/images/transactiq-logo-transparent.png';
+document.querySelectorAll('.brand img').forEach((img) => {
+  img.src = 'assets/images/transactiq-logo-light-text.png';
+});
+
+document.querySelectorAll('.footer-brand img').forEach((img) => {
+  img.src = 'assets/images/transactiq-logo-dark-text.png';
 });
 
 document.querySelectorAll('.metric-card strong').forEach((item) => {
@@ -41,6 +45,7 @@ layoutFixStyle.textContent = `
   main{padding-top:25px!important;}
   .hero h1,.page-hero h1{font-size:clamp(3rem,5.4vw,5.4rem)!important;line-height:1.03!important;letter-spacing:-.025em!important;word-spacing:.04em!important;max-width:980px!important;}
   .hero h1{font-size:clamp(3.1rem,5.6vw,5.6rem)!important;}
+  .editorial .dual-actions{margin-top:32px!important;}
   #contact-form{scroll-margin-top:118px!important;outline:none!important;}
   #contact-form:focus{box-shadow:0 16px 44px rgba(6,27,58,.105),0 0 0 4px rgba(32,198,223,.16)!important;}
   @media(min-width:901px){
@@ -60,6 +65,7 @@ layoutFixStyle.textContent = `
   }
   @media(max-width:680px){
     .hero h1,.page-hero h1{font-size:clamp(2.35rem,11vw,3.35rem)!important;line-height:1.06!important;letter-spacing:-.015em!important;word-spacing:.03em!important;}
+    .editorial .dual-actions{margin-top:28px!important;}
   }
 `;
 document.head.appendChild(layoutFixStyle);
