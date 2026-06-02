@@ -44,6 +44,8 @@ layoutFixStyle.textContent = `
   #contact-form{scroll-margin-top:118px!important;outline:none!important;}
   #contact-form:focus{box-shadow:0 16px 44px rgba(6,27,58,.105),0 0 0 4px rgba(32,198,223,.16)!important;}
   @media(min-width:901px){
+    .hero-inner{align-items:start!important;}
+    .hero-panel{align-self:start!important;margin-top:64px!important;}
     .site-footer .footer-inner{display:grid!important;grid-template-columns:auto minmax(520px,1fr) auto!important;align-items:center!important;gap:28px!important;max-width:1180px!important;}
     .site-footer .footer-brand{min-width:0!important;}
     .site-footer .footer-brand img{width:245px!important;max-width:245px!important;}
