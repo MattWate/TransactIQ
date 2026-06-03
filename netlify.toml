@@ -1,0 +1,34 @@
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = "</assets/images/hero-home.png>; rel=preload; as=image"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Link = "</assets/images/hero-home.png>; rel=preload; as=image"
+
+[[headers]]
+  for = "/commercial-consulting.html"
+  [headers.values]
+    Link = "</assets/images/hero-commercial-consulting.png>; rel=preload; as=image"
+
+[[headers]]
+  for = "/consumer-consulting.html"
+  [headers.values]
+    Link = "</assets/images/hero-consumer-consulting.png>; rel=preload; as=image"
+
+[[headers]]
+  for = "/about.html"
+  [headers.values]
+    Link = "</assets/images/hero-about.png>; rel=preload; as=image"
+
+[[headers]]
+  for = "/careers.html"
+  [headers.values]
+    Link = "</assets/images/hero-careers.png>; rel=preload; as=image"
+
+[[headers]]
+  for = "/contact.html"
+  [headers.values]
+    Link = "</assets/images/hero-contact.png>; rel=preload; as=image"
