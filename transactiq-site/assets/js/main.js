@@ -19,6 +19,18 @@ document.querySelectorAll('.footer-brand img').forEach((img) => {
   img.src = 'assets/images/transactiq-logo-dark-text.png';
 });
 
+const footerMeta = document.querySelector('.footer-meta');
+if (footerMeta && !footerMeta.querySelector('.footer-contact-link')) {
+  const email = document.createElement('div');
+  email.innerHTML = '<a class="footer-contact-link" href="mailto:info@transact-iq.com">info@transact-iq.com</a>';
+
+  const linkedIn = document.createElement('div');
+  linkedIn.innerHTML = '<a class="footer-contact-link" href="https://www.linkedin.com/company/transact-iq/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>';
+
+  footerMeta.appendChild(email);
+  footerMeta.appendChild(linkedIn);
+}
+
 document.querySelectorAll('.metric-card strong').forEach((item) => {
   item.textContent = item.textContent.replaceAll('⇧', '↑');
 });
@@ -202,6 +214,14 @@ style.textContent = `
   .footer-inner { background: transparent !important; }
   .footer-links,
   .footer-meta { color: #46596D !important; }
+
+  .footer-contact-link {
+    color: #294A68 !important;
+    font-weight: 800;
+    transition: color .2s ease;
+  }
+
+  .footer-contact-link:hover { color: var(--blue) !important; }
 
   .hero-panel,
   .glass-card { border-radius: 22px !important; }
