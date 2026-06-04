@@ -39,6 +39,12 @@ document.querySelectorAll('.hero h1, .page-hero h1').forEach((heading) => {
   heading.textContent = heading.textContent.trim().replace(/\.+$/, '');
 });
 
+document.querySelectorAll('.vertical-body > .kicker').forEach((label) => {
+  if (label.textContent.trim().toLowerCase() === 'what we advise on') {
+    label.textContent = 'WHERE WE ADVISE AND EXECUTE';
+  }
+});
+
 const style = document.createElement('style');
 style.textContent = `
   :root {
