@@ -52,31 +52,40 @@
       object-position: center bottom;
       filter: drop-shadow(0 22px 36px rgba(0, 0, 0, 0.28));
       transition: transform 0.45s ease;
+      transform-origin: center bottom;
     }
 
-    .team-card:hover .team-photo img,
-    .team-card:focus-within .team-photo img {
-      transform: scale(1.025);
+    .team-card.harold .team-photo {
+      padding: 26px 24px 0 !important;
+    }
+
+    .team-card.harold .team-photo img {
+      transform: scale(1.08) translateY(1.5%) !important;
+    }
+
+    .team-card.harold:hover .team-photo img,
+    .team-card.harold:focus-within .team-photo img {
+      transform: scale(1.11) translateY(1.5%) !important;
     }
 
     .team-card.charles .team-photo {
-      padding: 20px 18px 0;
+      padding: 18px 18px 0 !important;
       background: radial-gradient(circle at top right, rgba(32,198,223,0.20), transparent 36%), linear-gradient(135deg, var(--ink), var(--navy-2));
     }
 
     .team-card.charles .team-photo img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      object-position: center bottom;
+      object-fit: contain !important;
+      object-position: center bottom !important;
       filter: drop-shadow(0 22px 36px rgba(0, 0, 0, 0.28));
-      transform: scale(2.08) translateY(1.5%);
-      transform-origin: center bottom;
+      transform: scale(2.62) translateY(2%) !important;
+      transform-origin: center bottom !important;
     }
 
     .team-card.charles:hover .team-photo img,
     .team-card.charles:focus-within .team-photo img {
-      transform: scale(2.13) translateY(1.5%);
+      transform: scale(2.68) translateY(2%) !important;
     }
 
     .team-photo .fallback-initials {
@@ -176,10 +185,16 @@
         inset: auto;
       }
 
+      .team-card.harold .team-photo img,
+      .team-card.harold:hover .team-photo img,
+      .team-card.harold:focus-within .team-photo img {
+        transform: scale(1.02) translateY(1.5%) !important;
+      }
+
       .team-card.charles .team-photo img,
       .team-card.charles:hover .team-photo img,
       .team-card.charles:focus-within .team-photo img {
-        transform: scale(1.72) translateY(1.5%);
+        transform: scale(2.18) translateY(2%) !important;
       }
 
       .team-body {
@@ -210,7 +225,7 @@
     <header class="site-header">
       <div class="nav-shell">
         <a class="brand" href="index.html" aria-label="TransactIQ home">
-          <img src="assets/images/transactiq-logo.png" alt="TransactIQ">
+          <img src="assets/images/transactiq-logo-light-text.png" alt="TransactIQ">
         </a>
 
         <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
@@ -365,7 +380,7 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <a class="footer-brand" href="index.html" aria-label="TransactIQ home">
-          <img src="assets/images/transactiq-logo.png" alt="TransactIQ">
+          <img src="assets/images/transactiq-logo-dark-text.png" alt="TransactIQ">
         </a>
         <div class="footer-links">
           <a href="commercial-consulting.html">Commercial Consulting</a>
@@ -382,5 +397,47 @@
     </footer>
   </div>
   <script src="assets/js/main.js"></script>
+  <script>
+    (() => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .team-card.harold .team-photo { padding: 26px 24px 0 !important; }
+        .team-card.harold .team-photo img {
+          object-fit: contain !important;
+          object-position: center bottom !important;
+          transform: scale(1.08) translateY(1.5%) !important;
+          transform-origin: center bottom !important;
+        }
+        .team-card.harold:hover .team-photo img,
+        .team-card.harold:focus-within .team-photo img {
+          transform: scale(1.11) translateY(1.5%) !important;
+        }
+        .team-card.charles .team-photo { padding: 18px 18px 0 !important; }
+        .team-card.charles .team-photo img {
+          object-fit: contain !important;
+          object-position: center bottom !important;
+          transform: scale(2.62) translateY(2%) !important;
+          transform-origin: center bottom !important;
+        }
+        .team-card.charles:hover .team-photo img,
+        .team-card.charles:focus-within .team-photo img {
+          transform: scale(2.68) translateY(2%) !important;
+        }
+        @media (max-width: 680px) {
+          .team-card.harold .team-photo img,
+          .team-card.harold:hover .team-photo img,
+          .team-card.harold:focus-within .team-photo img {
+            transform: scale(1.02) translateY(1.5%) !important;
+          }
+          .team-card.charles .team-photo img,
+          .team-card.charles:hover .team-photo img,
+          .team-card.charles:focus-within .team-photo img {
+            transform: scale(2.18) translateY(2%) !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    })();
+  </script>
 </body>
 </html>
