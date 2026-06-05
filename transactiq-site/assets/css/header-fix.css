@@ -1,9 +1,14 @@
 :root {
-  --header-height: 86px;
+  --header-height: 72px;
+}
+
+html body,
+html body .page {
+  background: linear-gradient(180deg,#DDE8F3 0%,#E7EFF7 42%,#D5E2EF 100%) !important;
 }
 
 html body main {
-  padding-top: var(--header-height) !important;
+  padding-top: 25px !important;
 }
 
 html body .page .site-header {
@@ -13,88 +18,163 @@ html body .page .site-header {
   right: 0 !important;
   width: 100% !important;
   z-index: 1000 !important;
+  background: linear-gradient(90deg,#061B3A 0%,#071424 100%) !important;
+  border-bottom: 1px solid rgba(32,198,223,.14) !important;
+  backdrop-filter: none !important;
+}
+
+html body .page .site-header.scrolled {
+  background: linear-gradient(90deg,#061B3A 0%,#071424 100%) !important;
+  box-shadow: 0 14px 34px rgba(6,27,58,.28) !important;
 }
 
 html body .page .site-header .nav-shell {
-  max-width: 1280px !important;
+  max-width: 1180px !important;
   min-height: var(--header-height) !important;
-  padding: 8px 28px !important;
-  gap: 18px !important;
+  margin: 0 auto !important;
+  padding: 7px 28px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 26px !important;
   align-items: center !important;
 }
 
 html body .page .site-header .brand {
-  width: 250px !important;
-  min-width: 250px !important;
-  flex: 0 0 250px !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: 292px !important;
+  min-width: 292px !important;
+  flex: 0 0 292px !important;
+  height: auto !important;
+  overflow: visible !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 html body .page .site-header .brand img {
-  width: 250px !important;
-  max-width: 250px !important;
+  width: 292px !important;
+  max-width: 292px !important;
   height: auto !important;
+  display: block !important;
+  transform: none !important;
 }
 
 html body .page .site-header .nav-links {
-  gap: 17px !important;
-  font-size: 0.84rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 21px !important;
+  font-size: .88rem !important;
+  font-weight: 800 !important;
+  color: rgba(255,255,255,.76) !important;
+  white-space: nowrap !important;
   min-width: 0 !important;
 }
 
+html body .page .site-header .nav-links a:hover,
+html body .page .site-header .nav-links a.active {
+  color: var(--cyan) !important;
+}
+
 html body .page .site-header .nav-cta {
-  padding-inline: 16px !important;
+  color: var(--ink) !important;
+  background: var(--cyan) !important;
+  padding: 10px 15px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 12px 28px rgba(32,198,223,.2) !important;
+}
+
+html body .page .site-header .nav-toggle {
+  border: 1px solid rgba(255,255,255,.18) !important;
+  background: rgba(255,255,255,.96) !important;
 }
 
 @media (max-width: 1200px) {
-  :root { --header-height: 78px; }
-
   html body .page .site-header .brand {
-    width: 215px !important;
-    min-width: 215px !important;
-    flex-basis: 215px !important;
+    width: 245px !important;
+    min-width: 245px !important;
+    flex-basis: 245px !important;
   }
 
   html body .page .site-header .brand img {
-    width: 215px !important;
-    max-width: 215px !important;
+    width: 245px !important;
+    max-width: 245px !important;
   }
 
   html body .page .site-header .nav-links {
-    gap: 12px !important;
-    font-size: 0.78rem !important;
+    gap: 14px !important;
+    font-size: .86rem !important;
   }
 
   html body .page .site-header .nav-cta {
-    padding-inline: 13px !important;
+    padding-inline: 18px !important;
   }
 }
 
 @media (max-width: 960px) {
-  :root { --header-height: 72px; }
-
   html body .page .site-header .brand {
-    width: 205px !important;
-    min-width: 205px !important;
-    flex-basis: 205px !important;
+    width: 230px !important;
+    min-width: 230px !important;
+    flex-basis: 230px !important;
   }
 
   html body .page .site-header .brand img {
-    width: 205px !important;
-    max-width: 205px !important;
+    width: 230px !important;
+    max-width: 230px !important;
+  }
+
+  html body .page .site-header .nav-links {
+    position: fixed !important;
+    inset: 76px 18px auto 18px !important;
+    display: grid !important;
+    justify-content: stretch !important;
+    gap: 0 !important;
+    padding: 14px !important;
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 24px !important;
+    color: var(--muted) !important;
+    box-shadow: var(--shadow) !important;
+    transform: translateY(-20px) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity .22s ease, transform .22s ease !important;
+  }
+
+  html body.menu-open .page .site-header .nav-links {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  html body .page .site-header .nav-links a {
+    padding: 14px !important;
+    border-radius: 14px !important;
+  }
+
+  html body .page .site-header .nav-links a:hover,
+  html body .page .site-header .nav-links a.active {
+    background: var(--ice) !important;
+    color: var(--blue) !important;
+  }
+
+  html body .page .site-header .nav-cta {
+    text-align: center !important;
+    margin-top: 6px !important;
   }
 }
 
 @media (max-width: 680px) {
-  :root { --header-height: 68px; }
-
   html body .page .site-header .brand {
-    width: 178px !important;
-    min-width: 178px !important;
-    flex-basis: 178px !important;
+    width: 196px !important;
+    min-width: 196px !important;
+    flex-basis: 196px !important;
   }
 
   html body .page .site-header .brand img {
-    width: 178px !important;
-    max-width: 178px !important;
+    width: 196px !important;
+    max-width: 196px !important;
   }
 }
